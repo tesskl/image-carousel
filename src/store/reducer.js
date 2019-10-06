@@ -15,11 +15,11 @@ const reducer = (state = initialState, action) =>{
             if (newState.index > 0){
                 newState.index--;
             }
-
             break;
         }
+        default:
+        break;
     }
-    console.log(newState);
     return newState;
 }
 export default reducer;

@@ -16,12 +16,11 @@ const arrowStyle={
 class App extends React.Component {
   
  render(){
-  console.log(this.props);
     return (
       <Grid container spacing={6} direction="row" justify="center" alignItems="center" style={containerStyle}>
         <Grid item>
-          <IconButton>
-            <ArrowBack style={arrowStyle} onClick={this.props.prevImage}/>
+          <IconButton onClick={this.props.prevImage}>
+            <ArrowBack style={arrowStyle}/>
           </IconButton>
         </Grid>
 
@@ -38,8 +37,8 @@ class App extends React.Component {
         </Grid>
 
         <Grid item>
-          <IconButton>
-          <ArrowForward style={arrowStyle} onClick={this.props.nextImage}/>
+          <IconButton onClick={this.props.nextImage}>
+          <ArrowForward style={arrowStyle}/>
           </IconButton>
         </Grid>
       </Grid>

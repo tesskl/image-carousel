@@ -1,20 +1,25 @@
 const initialState = {
-    index: 4
+    index: 0
 }
 const reducer = (state = initialState, action) =>{
     const newState = {...state};
 
     switch (action.type){
         case "NEXT_IMAGE": {
-            newState.index++;
+            if (newState.index < 6){
+                newState.index++;
+            }
             break;
         }
         case "PREV_IMAGE": {
-            newState.index--;
+            if (newState.index > 0){
+                newState.index--;
+            }
+
             break;
         }
     }
-    
+    console.log(newState);
     return newState;
 }
 export default reducer;
